@@ -1,7 +1,7 @@
 import React from 'react'
-const Blog = ({ blog }) => (
+const Blog = (props) => (
   <div>
-    {blog.title} {blog.author}
+    {props.blog.title} {props.blog.author.name}
   </div>
 )
 
