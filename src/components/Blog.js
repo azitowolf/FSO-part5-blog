@@ -15,12 +15,14 @@ const Blog = (props) => {
   }
   return (
   <div>
-    {props.blog.title} 
-    <button onClick={toggleShow}>{`${showInfo ? 'show' : 'hide'} info`}</button> 
+    <div className="blogTitle">{props.blog.title}</div> 
+
+    <button onClick={toggleShow} className='toggleShowButton'>{`${showInfo ? 'show' : 'hide'} info`}</button> 
     <button onClick={handleDeleteClick}>delete blog</button> 
+
     <div className='moreInfo' style={{display: showInfo}}>
-      <div>{props.blog.url}</div>
-      <div>{props.blog.likes}<button onClick={handleLikeClick}>like</button></div>
+      <div className='url'>{props.blog.url}</div>
+      <div className='likes'>{props.blog.likes}<button onClick={handleLikeClick}>like</button></div>
       About the author
       <div>{props.blog.author.name}</div>
       <div>{props.blog.author.username}</div>

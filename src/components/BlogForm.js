@@ -15,10 +15,11 @@ const BlogForm = (props) => {
         props.addBlogToServer(blogObject)
     }
     return ( 
-        <form onSubmit={handleAddBlog}>
+        <form onSubmit={handleAddBlog} className='blogForm'>
             <div>
             title
-            <input
+            <input 
+            id="blogFormTitleInput"
             type="text"
             value={newBlogTitle}
             name="Title"
@@ -28,6 +29,7 @@ const BlogForm = (props) => {
         <div>
             url
             <input
+            id="blogFormURLInput"
             type="text"
             value={newBlogUrl}
             name="URL"

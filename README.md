@@ -1,5 +1,15 @@
 ## Part 5
 
+NPM Modules for this part
+
+https://testing-library.com/docs/react-testing-library/api#render-result
+
+``` javascript
+npm install --save-dev @testing-library/react @testing-library/jest-dom 
+npm add --save-dev eslint-plugin-jest
+
+```
+
 ### 5a
 
 Login on the front end
