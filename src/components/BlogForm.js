@@ -36,7 +36,7 @@ const BlogForm = (props) => {
             onChange={({ target }) => setNewBlogUrl(target.value)}
             />
         </div>
-        <button type="submit">post</button>
+        <button id='blogFormSubmitButton' type="submit">post</button>
         </form>
      );
 }

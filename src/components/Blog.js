@@ -14,11 +14,11 @@ const Blog = (props) => {
     props.deleteBlog(props.blog.id)
   }
   return (
-  <div>
+  <div className='blogComponent'>
     <div className="blogTitle">{props.blog.title}</div> 
 
     <button onClick={toggleShow} className='toggleShowButton'>{`${showInfo ? 'show' : 'hide'} info`}</button> 
-    <button onClick={handleDeleteClick}>delete blog</button> 
+    <button onClick={handleDeleteClick} id='deleteBlogButton'>delete blog</button> 
 
     <div className='moreInfo' style={{display: showInfo}}>
       <div className='url'>{props.blog.url}</div>

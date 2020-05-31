@@ -72,7 +72,7 @@ const App = () => {
       .create(blogObject)
       .then(returnedBlog => {
         setBlogs(blogs.concat(returnedBlog))
-        setNotificationTimer('successfully added your note!')
+        setNotificationTimer('successfully added your blog!')
       })
       .catch((exception) => {
         setNotificationTimer(`error caught - ${exception.message}`)
@@ -141,6 +141,7 @@ const App = () => {
       <div>
         username
           <input
+          id='username'
           type="text"
           value={username}
           name="Username"
@@ -150,13 +151,14 @@ const App = () => {
       <div>
         password
           <input
+          id='password'
           type="password"
           value={password}
           name="Password"
           onChange={({ target }) => setPassword(target.value)}
         />
       </div>
-      <button type="submit">login</button>
+      <button id='login-button' type="submit">login</button>
     </form>
   )
 
@@ -168,7 +170,9 @@ if (user) {
       <h2>add new</h2>
       {renderBlogForm()}
       <h2>blogs</h2>
-      {blogsList()}
+      <div className='blogsList'>
+        {blogsList()}
+      </div>
     </div>
   )
 } else {
